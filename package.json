@@ -1,0 +1,16 @@
+{
+  "name": "node-js-project-template",
+  "version": "1.0.0",
+  "description": "NodeJS project setup for quick start!!",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "node dist/app.js",
+    "build": "tsc -p src/",
+    "clean": "rm -rf ./dist"
+  },
+  "author": "Gaurang Delavadiya",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
