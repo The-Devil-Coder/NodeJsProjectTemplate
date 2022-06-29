@@ -1,5 +1,6 @@
 import {default as express} from "express";
 import {config} from "./config"
+import { v1Router } from "./routes";
 
 
 /**App constructer class to create an express app. It have `run` method to start the express server.
@@ -16,11 +17,18 @@ export class ConstructApp {
 
         // Creating express app
         this.app = express();
+
+        // Add routes
+        this.addRoutes()
     }
     
-    // User ConstructAPP.instance to get singleTon object
+    // Use ConstructAPP.instance to get singleTon object
     static get instance() {
         return this._instance;
+    }
+
+    private addRoutes() {
+        this.app.use('/api/v1', v1Router);
     }
 
     public run() {
