@@ -1,1 +1,1 @@
-export {getSampleUser, setSampleUser} from './sampleUser'
+export {getSampleUser, setSampleUser, updateSampleUser, deleteSampleUser} from './sampleUser'
